@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { SearchBar } from '../components/SearchBar';
 import { PlaceModal } from '../components/PlaceModal';
-import { usePlaces } from '../contexts/placesContext';
+import { usePlaces } from '../contexts/PlacesContext';
 import { CenterButton } from '../components/CenterButton';
 
 export const MapScreen: React.FC = () => {
