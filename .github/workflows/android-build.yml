@@ -2,9 +2,9 @@ name: Android Build
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main, master, feature/map ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ main, master, feature/map ]
 
 jobs:
   build:
@@ -31,5 +31,3 @@ jobs:
       with:
         name: app-debug-apk
         path: app/build/outputs/apk/debug/app-debug.apk
-
-        
