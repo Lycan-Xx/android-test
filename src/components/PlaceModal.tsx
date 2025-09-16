@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { View, Modal, Text, TextInput, Button, Picker } from 'react-native';
+import { View, Modal, Text, TextInput, Button } from 'react-native';
+import { Picker } from '@react-native-picker/picker';
 import { usePlaces } from '../contexts/PlacesContext';
 
 export const PlaceModal: React.FC<{ visible: boolean; lat: number; lon: number; onClose: () => void }> = ({ visible, lat, lon, onClose }) => {
@@ -20,7 +21,6 @@ export const PlaceModal: React.FC<{ visible: boolean; lat: number; lon: number; 
           <Text>New place</Text>
           <TextInput placeholder="Title" value={title} onChangeText={setTitle} />
           <Text>Type</Text>
-          {/* Picker fallback - replace with RNPicker or custom select */}
           <Picker selectedValue={selectedType} onValueChange={(v) => setSelectedType(v)}>
             <Picker.Item label="(none)" value={undefined} />
             {types.map(t => <Picker.Item key={t.id} label={t.name} value={t.id} />)}
