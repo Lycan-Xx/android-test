@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Modal, Text, TextInput, Button } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
-import { usePlaces } from '../contexts/PlacesContext';
+import { usePlaces } from '../contexts/placesContext';
 
 export const PlaceModal: React.FC<{ visible: boolean; lat: number; lon: number; onClose: () => void }> = ({ visible, lat, lon, onClose }) => {
   const { addPlace, types, addType } = usePlaces();
